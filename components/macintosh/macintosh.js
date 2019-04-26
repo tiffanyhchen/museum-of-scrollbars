@@ -155,12 +155,12 @@ function movePagefull(e) {
 
 function movePageDown() {
   pageHeight = 20
-  moveSlider(Math.min(slider.lastMousePosY + pageHeight, getAtInt(track, 'height') - getAtInt(slider, 'height')))
+  moveSlider(Math.min(slider.lastMousePosY + pageHeight, slider.viewpointBottom - getAtInt(slider,'height')))
 }
 
 function movePageUp() {
   pageHeight = 20
-  moveSlider(Math.max(slider.lastMousePosY - pageHeight, 0))
+  moveSlider(Math.max(slider.lastMousePosY - pageHeight, slider.viewpointTop))
 }
 };
 
