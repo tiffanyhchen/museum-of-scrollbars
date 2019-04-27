@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Custom CSS -->
+        <link href="styles/styles.css" rel="stylesheet">
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
+        <title>Museum of Interaction Techniques — Scrollbars</title>
+    </head>
+    <body>
+        <img src="assets/background.svg" id="background"/>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <span id="link-title">
+                                Museum of Interaction Techniques
+                            </span><br/>
+                            SCROLLBARS
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="content">
+                <ul>
+                    <li><span></span>
+                      <div>
+                        <div class="title">Codify</div>
+                        <div class="info">Let&apos;s make coolest things in css</div>
+                        <div class="type">Presentation</div>
+                      </div> <span class="number"><span>10:00</span> <span>12:00</span></span>
+                    </li>
+                    <li>
+                      <div><span></span>
+                        <div class="title">Codify</div>
+                        <div class="info">Let&apos;s make coolest things in javascript</div>
+                        <div class="type">Presentation</div>
+                      </div> <span class="number"><span>13:00</span> <span>14:00</span></span>
+                    </li>
+                    <li>
+                      <div><span></span>
+                        <div class="title">Codify</div>
+                        <div class="info">Let&apos;s make coolest things in css</div>
+                        <div class="type">Review</div>
+                      </div> <span class="number"><span>15:00</span> <span>17:45</span></span>
+                    </li>
+                  </ul>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+        <script>
+            $('#background').tilt({
+                maxTilt: 3,
+                perspective: 500,
+                glare: true,
+                maxGlare: 0.2,
+                scale: 1.01,
+                easing: "cubic-bezier(.03,.98,.52,.99)",
+                transition: true,
+                speed: 200
+            });
+        </script>
+    </body>
+</html>

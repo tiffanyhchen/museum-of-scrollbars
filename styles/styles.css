@@ -1,0 +1,150 @@
+/* Font faces */
+@font-face {
+    font-family: 'AktivGroteskRegular';
+    src: url('../fonts/AktivGroteskRegular.ttf');
+}
+
+@font-face {
+    font-family: 'AktivGroteskBold';
+    src: url('../fonts/AktivGroteskBold.ttf');
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+    background-color: black;
+    font-family: 'AktivGroteskRegular';
+    color: #ffffff;
+}
+
+#background{
+    z-index: -100;
+    width: 100%;
+}
+
+.container{
+    z-index: 100; 
+    position: absolute; 
+    top: 0px;
+    left: 0px;
+}
+
+nav ul {
+    list-style-type: none;
+    font-size: 14px;
+    margin: 3em;
+}
+
+#link-title {
+    font-family: 'AktivGroteskBold';
+    font-style: normal;
+    font-size: 24px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.content{
+    overflow-y: scroll;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+/* Scrollbars */
+.content::-webkit-scrollbar {
+    width: 0.4em;
+}
+
+.content::-webkit-scrollbar-track {
+    background-color: none;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: 1px solid slategrey;
+}
+
+.content ul {
+  margin: 0;
+  margin-top: 100px;
+  list-style: none;
+  position: relative;
+  padding: 1px 100px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.content ul:before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  border-left: 2px dashed #fff;
+}
+
+.content ul li {
+  position: relative;
+  margin-left: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 14px;
+  border-radius: 6px;
+  width: 250px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.08);
+}
+
+.content ul li:not(:first-child) {
+  margin-top: 60px;
+}
+.content ul li > span {
+  width: 2px;
+  height: 100%;
+  background: #fff;
+  left: -30px;
+  top: 0;
+  position: absolute;
+}
+.content ul li > span:before, .content ul li > span:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  position: absolute;
+  background: #86b7e7;
+  left: -5px;
+  top: 0;
+}
+.content ul li span:after {
+  top: 100%;
+}
+.content ul li > div {
+  margin-left: 10px;
+}
+.content div .title, .content div .type {
+  font-weight: 600;
+  font-size: 12px;
+}
+.content div .info {
+  font-weight: 300;
+}
+.content div > div {
+  margin-top: 5px;
+}
+.content span.number {
+  height: 100%;
+}
+.content span.number span {
+  position: absolute;
+  font-size: 10px;
+  left: -35px;
+  font-weight: bold;
+}
+.content span.number span:first-child {
+  top: 0;
+}
+.content span.number span:last-child {
+  top: 100%;
+}
