@@ -1,0 +1,30 @@
+/* Scrollbar Styles */
+.scrollable {
+  overflow-y: scroll;
+  font: 24px/36px sans-serif;
+  width: 200px;
+  height: 200px;
+  padding: 5px;
+} 
+
+.scrollbar {
+}
+
+div {
+  cursor : default;
+}
+
+.contentBox {
+  overflow-y: scroll;
+  height: 300px;
+  width: 50%;
+}
+
+.contentBox::-webkit-scrollbar {
+  width: 0 !important 
+}
+
+
+.scrollingWindow {
+  height:300px;
+}
