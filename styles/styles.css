@@ -1,0 +1,18 @@
+/* Font faces */
+@font-face {
+    font-family: 'AktivGroteskRegular';
+    src: url('../fonts/AktivGroteskRegular.ttf');
+}
+
+@font-face {
+    font-family: 'AktivGroteskBold';
+    src: url('../fonts/AktivGroteskBold.ttf');
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'AktivGroteskRegular';
+    color: #ffffff;
+}
