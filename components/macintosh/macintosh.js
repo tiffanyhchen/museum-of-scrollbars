@@ -7,6 +7,7 @@ var track = document.getElementById('track');
 var percentage = document.getElementById('percentage');
 var upBtn = document.getElementById('upBtn');
 var downBtn = document.getElementById('downBtn');
+var contentBox = document.getElementsByClassName('contentBox')[0];
 
 //initial states variables, append to their elements:
 document.mouseState = 'up';
@@ -15,6 +16,7 @@ slider.viewpointTop = track.getBoundingClientRect().top;
 slider.viewpointBottom = track.getBoundingClientRect().bottom
 slider.lastMousePosY = slider.viewpointTop;
 console.log(slider.lastMousePosY)
+console.log(contentBox.scrollHeight)
 slider.proposedNewPosY = 0;
 slider.percentage = 0;
 
@@ -64,9 +66,25 @@ upBtn.onclick = function(e) {
 downBtn.onclick = function(e) {
   console.log("down button clicked")
   pageHeight = 20
-  console.log("last y pos: "+slider.lastMousePosY)
-  console.log("new y pos: "+Math.min(slider.lastMousePosY + pageHeight, slider.viewpointBottom - getAtInt(slider,'height')))
+  // console.log("last y pos: "+slider.lastMousePosY)
+  // console.log("new y pos: "+Math.min(slider.lastMousePosY + pageHeight, slider.viewpointBottom - getAtInt(slider,'height')))
   moveSlider(Math.min(slider.lastMousePosY + pageHeight, slider.viewpointBottom - getAtInt(slider,'height')))
+}
+
+upBtn.onmousedown = function(e) {
+  document.getElementsByClassName('macintoshArrow')[0].src = "../../assets/arrowUpFilled.png"
+}
+
+upBtn.onmouseup = function(e) {
+  document.getElementsByClassName('macintoshArrow')[0].src = "../../assets/arrowUp.png"
+}
+
+downBtn.onmousedown = function(e) {
+  document.getElementsByClassName('macintoshArrow')[1].src = "../../assets/arrowDownFilled.png"
+}
+
+downBtn.onmouseup = function(e) {
+  document.getElementsByClassName('macintoshArrow')[1].src = "../../assets/arrowDown.png"
 }
 
 //Helper function. Not strictly required, but will make the logic down the bottom
@@ -77,30 +95,38 @@ var getAtInt = function getAtInt(obj, attrib) {
 
 function moveSlider(proposedNewPosY) {
   if (proposedNewPosY < slider.viewpointTop) {
-    console.log("put slider at top")
+    // console.log("put slider at top")
     slider.style.marginTop = '0px';
     proposedNewPosY = slider.viewpointTop
   } else if (proposedNewPosY > slider.viewpointBottom - getAtInt(slider,'height')){
-    console.log("put slider at bottom")
+    // console.log("put slider at bottom")
     slider.style.marginTop = getAtInt(track,'height') - getAtInt(slider,'height')
     proposedNewPosY = slider.viewpointBottom
   } else if (proposedNewPosY < slider.lastMousePosY) {
-    console.log("move slider up")
+    // console.log("move slider up")
     // slider.style.marginTop = getAtInt(track, 'height') - getAtInt(slider, 'height') - 50 + 'px';
     slider.style.marginTop = proposedNewPosY - slider.viewpointTop + 'px';
   } else {
-    console.log("move slider down")
+    // console.log("move slider down")
     slider.style.marginTop = proposedNewPosY - slider.viewpointTop + 'px';
   }
-  console.log("computed margin: "+proposedNewPosY - slider.viewpointTop + 'px')
-  console.log("slider margin: "+slider.style.marginTop)
+  // console.log("slider margin: "+slider.style.marginTop)
 
   slider.lastMousePosY = proposedNewPosY;
   // hook in target of slider action here: i.e. what the slider is sliding i.e. scroll some other div
   // for this example we will compute the slider's percentage and update the grey box:
-  slider.percentage = parseInt(((parseInt(slider.style.marginTop, 10)) / (parseInt(track.style.height, 10) - parseInt(slider.style.height, 10))) * 100, 10) + '%';
+  slider.percentage = ((parseInt(slider.style.marginTop, 10)) / (parseInt(track.style.height, 10) - parseInt(slider.style.height, 10)));
 
   percentage.textContent = slider.percentage;  //.innerText will not work for Firefox
+  updateContentBox(slider.percentage)
+}
+
+function updateContentBox(percentage) {
+  console.log("Updating Scroll Box")
+  //contentBox.scrollTop = contentBox.scrollHeight * percentage
+  console.log(percentage)
+  console.log(contentBox.scrollTop)
+  contentBox.scrollTo(0,contentBox.scrollHeight * percentage)
 }
 
 document.onmousemove = function (e) {
@@ -154,12 +180,12 @@ function movePagefull(e) {
 }
 
 function movePageDown() {
-  pageHeight = 20
+  pageHeight = 90
   moveSlider(Math.min(slider.lastMousePosY + pageHeight, slider.viewpointBottom - getAtInt(slider,'height')))
 }
 
 function movePageUp() {
-  pageHeight = 20
+  pageHeight = 90
   moveSlider(Math.max(slider.lastMousePosY - pageHeight, slider.viewpointTop))
 }
 };

@@ -7,10 +7,24 @@
   padding: 5px;
 } 
 
-.scrollbox {
-  margin-top: 50px;
+.scrollbar {
 }
 
 div {
   cursor : default;
+}
+
+.contentBox {
+  overflow-y: scroll;
+  height: 300px;
+  width: 50%;
+}
+
+.contentBox::-webkit-scrollbar {
+  width: 0 !important 
+}
+
+
+.scrollingWindow {
+  height:300px;
 }
