@@ -11,7 +11,7 @@
         <title>Museum of Interaction Techniques — Scrollbars</title>
     </head>
     <body>
-        <img src="assets/background.svg" id="background"/>
+        <div data-tilt data-tilt-full-page-listening data-tilt-scale="1.05" data-tilt-speed="100" data-tilt-perspective="3000" id="background"><img src="assets/background.svg" id="background-img" /></div>
         <div class="container">
             <nav>
                 <ul>
@@ -32,36 +32,101 @@
                         <div class="title">Codify</div>
                         <div class="info">Let&apos;s make coolest things in css</div>
                         <div class="type">Presentation</div>
-                      </div> <span class="number"><span>10:00</span> <span>12:00</span></span>
+                      </div> <span class="number"><span>10:00</span> <span></span></span>
                     </li>
                     <li>
                       <div><span></span>
                         <div class="title">Codify</div>
                         <div class="info">Let&apos;s make coolest things in javascript</div>
                         <div class="type">Presentation</div>
-                      </div> <span class="number"><span>13:00</span> <span>14:00</span></span>
+                      </div> <span class="number"><span>13:00</span> <span></span></span>
                     </li>
                     <li>
                       <div><span></span>
                         <div class="title">Codify</div>
                         <div class="info">Let&apos;s make coolest things in css</div>
                         <div class="type">Review</div>
-                      </div> <span class="number"><span>15:00</span> <span>17:45</span></span>
+                      </div> <span class="number"><span>15:00</span> <span></span></span>
+                    </li>
+                    <li>
+                      <div><span></span>
+                        <div class="title">Codify</div>
+                        <div class="info">Let&apos;s make coolest things in css</div>
+                        <div class="type">Review</div>
+                      </div> <span class="number"><span>15:00</span> <span></span></span>
+                    </li>
+                    <li>
+                      <div><span></span>
+                        <div class="title">Codify</div>
+                        <div class="info">Let&apos;s make coolest things in css</div>
+                        <div class="type">Review</div>
+                      </div> <span class="number"><span>15:00</span> <span></span></span>
+                    </li>
+                    <li>
+                      <div><span></span>
+                        <div class="title">Codify</div>
+                        <div class="info">Let&apos;s make coolest things in css</div>
+                        <div class="type">Review</div>
+                      </div> <span class="number"><span>15:00</span> <span></span></span>
+                    </li>
+                    <li>
+                      <div><span></span>
+                        <div class="title">Codify</div>
+                        <div class="info">Let&apos;s make coolest things in css</div>
+                        <div class="type">Review</div>
+                      </div> <span class="number"><span>15:00</span> <span></span></span>
+                    </li>
+                    <li>
+                      <div><span></span>
+                        <div class="title">Codify</div>
+                        <div class="info">Let&apos;s make coolest things in css</div>
+                        <div class="type">Review</div>
+                      </div> <span class="number"><span>15:00</span> <span></span></span>
+                    </li>
+                    <li>
+                      <div><span></span>
+                        <div class="title">Codify</div>
+                        <div class="info">Let&apos;s make coolest things in css</div>
+                        <div class="type">Review</div>
+                      </div> <span class="number"><span>15:00</span> <span></span></span>
+                    </li>
+                    <li>
+                      <div><span></span>
+                        <div class="title">Codify</div>
+                        <div class="info">Let&apos;s make coolest things in css</div>
+                        <div class="type">Review</div>
+                      </div> <span class="number"><span>15:00</span> <span></span></span>
+                    </li>
+                    <li>
+                      <div><span></span>
+                        <div class="title">Codify</div>
+                        <div class="info">Let&apos;s make coolest things in css</div>
+                        <div class="type">Review</div>
+                      </div> <span class="number"><span>15:00</span> <span></span></span>
+                    </li>
+                    <li>
+                      <div><span></span>
+                        <div class="title">Codify</div>
+                        <div class="info">Let&apos;s make coolest things in css</div>
+                        <div class="type">Review</div>
+                      </div> <span class="number"><span>15:00</span> <span></span></span>
                     </li>
                   </ul>
             </div>
+            <br/><br/><br/>
+            
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
         <script>
-            $('#background').tilt({
-                maxTilt: 3,
-                perspective: 500,
+            VanillaTilt.init(document.querySelectorAll("#background"), {
+                max: 3,
+                speed: 100,
+                perspective: 3000,
                 glare: true,
-                maxGlare: 0.2,
-                scale: 1.01,
+                scale: 1.05,
                 easing: "cubic-bezier(.03,.98,.52,.99)",
                 transition: true,
-                speed: 200
+                gyroscope: false
             });
         </script>
     </body>

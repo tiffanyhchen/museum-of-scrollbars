@@ -12,19 +12,19 @@
 body{
     margin: 0;
     padding: 0;
-    overflow:hidden;
     background-color: black;
+    overflow: hidden;
     font-family: 'AktivGroteskRegular';
     color: #ffffff;
 }
 
-#background{
-    z-index: -100;
+#background-img, #background{
     width: 100%;
+    z-index: -100;
 }
 
 .container{
-    z-index: 100; 
+    z-index: 100;
     position: absolute; 
     top: 0px;
     left: 0px;
@@ -48,14 +48,15 @@ a {
 }
 
 .content{
-    overflow-y: scroll;
+    overflow: scroll;
     min-width: 100vw;
-    min-height: 100vh;
+    position:relative;
+    height: 70vh;
 }
 
 /* Scrollbars */
 .content::-webkit-scrollbar {
-    width: 0.4em;
+    width: 0em;
 }
 
 .content::-webkit-scrollbar-track {
@@ -63,8 +64,7 @@ a {
 }
 
 .content::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.3);
-    outline: 1px solid slategrey;
+    none;
 }
 
 .content ul {
@@ -82,7 +82,7 @@ a {
   width: 1px;
   height: 100%;
   position: absolute;
-  border-left: 2px dashed #fff;
+  border-left: 2px solid #fff;
 }
 
 .content ul li {
@@ -95,9 +95,12 @@ a {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.08);
 }
 
+/*
 .content ul li:not(:first-child) {
   margin-top: 60px;
 }
+*/
+
 .content ul li > span {
   width: 2px;
   height: 100%;
@@ -106,6 +109,7 @@ a {
   top: 0;
   position: absolute;
 }
+
 .content ul li > span:before, .content ul li > span:after {
   content: "";
   width: 8px;
@@ -113,38 +117,47 @@ a {
   border-radius: 50%;
   border: 2px solid #fff;
   position: absolute;
-  background: #86b7e7;
+  background: #fff;
   left: -5px;
   top: 0;
 }
+
 .content ul li span:after {
   top: 100%;
 }
+
 .content ul li > div {
   margin-left: 10px;
 }
+
 .content div .title, .content div .type {
   font-weight: 600;
   font-size: 12px;
 }
+
 .content div .info {
   font-weight: 300;
 }
+
 .content div > div {
   margin-top: 5px;
 }
+
 .content span.number {
   height: 100%;
 }
+
 .content span.number span {
   position: absolute;
   font-size: 10px;
   left: -35px;
   font-weight: bold;
 }
+
 .content span.number span:first-child {
   top: 0;
 }
+
 .content span.number span:last-child {
   top: 100%;
 }
