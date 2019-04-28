@@ -1,0 +1,11 @@
+.bravoTrack {
+  background-color: #fff;
+  position: static;
+  width: 40px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.bravoTrack:hover {
+  cursor: url(../../assets/bravoCursorNeutral.png), auto;
+}

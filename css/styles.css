@@ -51,15 +51,3 @@ div {
   position : absolute;
   width: 18px;
 }
-
-#track:hover {
-  border: 1pt solid black;
-}
-
-#leftSideTrack {
-  border-right: none;
-}
-
-#rightSideTrack {
-  border-left: none;
-}

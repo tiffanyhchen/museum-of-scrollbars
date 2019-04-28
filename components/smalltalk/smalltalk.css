@@ -15,17 +15,23 @@
 
 #rightSideTrack {
   cursor: url(../../assets/cursorUp.png), auto;
+  border-right: none;
 }
 
 #leftSideTrack {
   cursor: url(../../assets/cursorDown.png), auto;
+  border-left: none;
 }
 
 #track, #slider {
   cursor: url(../../assets/cursorSide.png), auto;
 }
 
-.macintoshSlider {
+#track:hover {
+  border: 1pt solid black; 
+}
+
+.smalltalkSlider {
   background: #cccccc;
   border: 1pt solid black;
 }
