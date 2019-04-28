@@ -1,0 +1,31 @@
+.smalltalkTrack {
+  background-color: #fff;
+  position: static;
+  width: 40px;
+  padding-left: 0;
+  padding-right: 0;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+}
+
+.smalltalkSideTrack {
+  width: 20px;
+  border: 1pt solid black;
+}
+
+#rightSideTrack {
+  cursor: url(../../assets/cursorUp.png), auto;
+}
+
+#leftSideTrack {
+  cursor: url(../../assets/cursorDown.png), auto;
+}
+
+#track, #slider {
+  cursor: url(../../assets/cursorSide.png), auto;
+}
+
+.macintoshSlider {
+  background: #cccccc;
+  border: 1pt solid black;
+}
