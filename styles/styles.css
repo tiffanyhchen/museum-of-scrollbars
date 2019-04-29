@@ -85,6 +85,9 @@ a {
     to   { opacity: 1; }
 }
 
+.container{
+    width: 100%;
+}
 
 .left-side{
     float: left;
@@ -114,8 +117,8 @@ a {
     float: right;
     width: 60%;
     overflow: scroll;
-    min-width: 60vw;
-    position:relative;
+    max-width: 60vw;
+    position: relative;
     height: 70vh;
     margin-left: 3em;
 }
@@ -177,20 +180,6 @@ a {
   top: 0;
   position: absolute;
 }
-
-/*
-.content ul li > span:before, .content ul li > span:after {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  position: absolute;
-  background: #fff;
-  left: -5px;
-  top: 0;
-}
-*/
 
 .right-side ul li span:after {
     top: 100%;
@@ -255,11 +244,11 @@ div.year{
     color: rgba(255, 255, 255, 0.5);
 }
 
-div p{
+div p {
     line-height: 20px;
 }
 
-div h6{
+div h6 {
     font-size: 14px;
     font-family: 'AktivGroteskBold';
     padding: 0;
@@ -267,3 +256,85 @@ div h6{
     margin-top: 0.5em;
 }
 
+#page {
+    overflow-y: scroll;
+    position: relative;
+    height: 300px;
+    float: left;
+    width: 30%;
+    height: 70vh;
+    margin-left: 5em;
+    padding-left: 1.25em;
+    direction:rtl; 
+}
+
+#page::-webkit-scrollbar {
+    width: .2em;
+}
+
+#page::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.5);
+    width: 1px;
+}
+
+#page::-webkit-scrollbar-thumb {
+   background: rgba(255, 255, 255, 0.5);
+   border-radius: 50px;
+}
+
+#img-content {
+    float: right;
+    width: 55%;
+    max-width: 55vw;
+    position: relative;
+    height: 70vh;
+    margin-left: 3em;
+}
+
+.img-fluid{
+    max-width:100%;
+    max-height:100%;
+    object-fit: contain;
+}
+
+#page h5{
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5em;
+    direction:ltr;
+}
+
+#page p{
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 20px;
+    direction:ltr;
+}
+
+.content-year{
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.5);
+    direction:ltr;
+}
+
+.detail{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    direction:ltr;
+}
+
+.detail-title{
+    font-size: 14px;
+    font-family: 'AktivGroteskBold';
+    color: rgba(255, 255, 255, 0.5);
+    direction:ltr;
+}
+
+.detail-text{
+    margin-top: 0.2em;
+    direction:ltr;
+}
+
+ 
