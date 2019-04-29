@@ -342,7 +342,47 @@ div h6 {
     direction:ltr;
 }
 
-@media only screen and (max-width: 1280px) {
+.mobile-message{
+    display: none;
+}
+
+@media (min-width: 701px) and (max-width: 1280px) {
+    body{
+        overflow: scroll;
+    }
+    
+    .right-side, .left-side, #page, #img-content{
+        float: none;
+    }
+    
+    #page{
+        margin-bottom: 5em;
+    }
+    
+    #img-content{
+        margin-left: 5em;
+    }
+    
+    .left-side{
+        height: 40vh;
+        width: 50vw;
+    }
+    
+    .right-side{
+        margin-left: 1em;
+        width: 100vw;
+    }
+    
+    #background-img{
+        visibility: hidden;
+    }
+    
+    .right-side ul li {
+      width: 70%;
+    }
+}
+
+@media (max-width: 700px){
     #background, .container{
         visibility: hidden;
     }
@@ -355,7 +395,7 @@ div h6 {
     }
     
     .mobile-message{
-        visibility: visible;
+        display: block;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -366,4 +406,5 @@ div h6 {
         font-size: 18px;
         line-height: 30px;
     }
+
 }
