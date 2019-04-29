@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Custom CSS -->
+        <link href="styles/styles.css" rel="stylesheet">
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
+        <title>Museum of Interaction Techniques — Scrollbars</title>
+    </head>
+    <body>
+        <div data-tilt data-tilt-full-page-listening data-tilt-scale="1.05" data-tilt-speed="100" data-tilt-perspective="3000" id="background"><img src="assets/background.svg" id="background-img" /></div>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <span id="link-title">
+                                Museum of Interaction Techniques
+                            </span><br/>
+                            SCROLLBARS
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="content">
+                <div class="right-side">
+                    HELLO WORLD
+                </div>
+                <div class="left-side">
+                    YEET
+                </div>
+            </div>
+            
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+        <script>
+            VanillaTilt.init(document.querySelectorAll("#background"), {
+                max: 3,
+                speed: 100,
+                perspective: 3000,
+                glare: true,
+                scale: 1.05,
+                easing: "cubic-bezier(.03,.98,.52,.99)",
+                transition: true,
+                gyroscope: false
+            });
+        </script>
+    </body>
+</html>
