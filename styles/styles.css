@@ -9,10 +9,15 @@
     src: url('../fonts/AktivGroteskBold.ttf');
 }
 
+@font-face {
+    font-family: 'AktivGroteskBoldItalic';
+    src: url('../fonts/AktivGroteskBoldItalic.ttf');
+}
+
 body{
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: #222222;
     overflow: hidden;
     font-family: 'AktivGroteskRegular';
     color: #ffffff;
@@ -337,4 +342,28 @@ div h6 {
     direction:ltr;
 }
 
- 
+@media only screen and (max-width: 1280px) {
+    #background, .container{
+        visibility: hidden;
+    }
+    
+    #sorry{
+        font-family: 'AktivGroteskBoldItalic';
+        color: rgba(255, 255, 255, 0.5);
+        letter-spacing: 0.05em;
+        font-size: 36px;
+    }
+    
+    .mobile-message{
+        visibility: visible;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -150px;
+        width: 300px;
+        height: 200px;
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
