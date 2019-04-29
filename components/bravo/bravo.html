@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Tiffany Chen, Jason Deng, Dylan Hyun">
+  <meta name="keywords"
+    content="Interaction Techniques, Scrollbars, Carnegie Mellon, Pittsburgh, CMU, Carnegie Mellon University">
+  <meta name="Museum of Scrollbars">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Museum of Scrollbars</title>
+
+  <!-- <link rel="icon" href="./assets/logo.png" type="image/png" sizes="16x16"> -->
+
+
+  <!-- %%%% STYLES %%%% -->
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+
+  <!-- General App Styles -->
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="bravo.css">
+
+  <!-- %%%% END STYLES %%%% -->
+
+  <!-- %%%% SCRIPTS %%%% -->
+
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Boostrap -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+
+  <!-- General App Scripts
+  <script src="macintosh.js"></script> -->
+
+  <!-- %%%% END SCRIPTS %%%% -->
+
+</head>
+
+<body>
+  <h1>Bravo 1974</h1>
+
+  <div id='percentage'>0&#37;</div>
+  <div class="scrollingWindow row p-5">
+    <div class="scrollbar d-flex row">
+      <div class="bravoTrack col border" id='track'>
+      </div>
+    </div>
+    <div class="contentBox pl-4 pr-3">
+      <h3>1974: Xerox PARC Bravo</h3>
+      </br>
+      <p>
+        Bravo was the first WYSIWYG (what you see is what you get) editor on the Xerox Alto personal computer. It had
+        some of the first scrollable interactions on a document that involved a mouse that had three buttons. To scroll,
+        the user would move the cursor to the left margin, and the cursor would change shape to a double arrow. Using
+        the mouse, clicking the left button will scroll up, the right button will scroll down, and the middle button
+        will take the relative vertical mouse position and jump to that relative position in the document. For example,
+        if you clicked the middle button at the top of the left margin, the document will scroll to the very top, and if
+        you click the middle button halfway down the left margin, it will scroll the middle of the document.
+
+      </p>
+      <p>
+        Bravo was a modal editor—characters typed on the keyboard were usually commands to Bravo, except when in
+        "insert" or "append" mode, in which case they were entered into the character buffer. Bravo made extensive use
+        of the mouse for marking locations in the text, as well as selecting areas of the text, but it was not used for
+        command entry. (Being at the very dawn of graphical user interface design, a non-command driven interface was
+        judged too ambitious and possibly even inefficient and cumbersome.)
+      </p>
+      <p>
+        Although Bravo usually displayed the text with formatting (e.g. with justification, fonts, and proportional
+        spacing of characters), it did not normally attempt to reproduce the way a page would look in hardcopy. This was
+        because the Alto monitor provided a resolution of 72 pixels per inch, but the laser printers used at PARC
+        provided a resolution of 300 PPI. This meant that the screen could at best only provide an approximation of the
+        way the page would look when printed. Instead, the normal display mode showed the text using character sizes,
+        etc., more suited to the capability of the display.
+      </p>
+    </div>
+  </div>
+
+  <!-- General App Scripts -->
+  <script src="bravo.js"></script>
+</body>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Tiffany Chen, Jason Deng, Dylan Hyun">
+  <meta name="keywords"
+    content="Interaction Techniques, Scrollbars, Carnegie Mellon, Pittsburgh, CMU, Carnegie Mellon University">
+  <meta name="Museum of Scrollbars">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Museum of Scrollbars</title>
+
+  <!-- <link rel="icon" href="./assets/logo.png" type="image/png" sizes="16x16"> -->
+
+
+  <!-- %%%% STYLES %%%% -->
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+
+  <!-- General App Styles -->
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="smalltalk.css">
+
+  <!-- %%%% END STYLES %%%% -->
+
+  <!-- %%%% SCRIPTS %%%% -->
+
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Boostrap -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+
+  <!-- General App Scripts
+  <script src="macintosh.js"></script> -->
+
+  <!-- %%%% END SCRIPTS %%%% -->
+
+</head>
+
+<body>
+  <h1>Smalltalk 1977</h1>
+
+  <div id='percentage'>0&#37;</div>
+  <div class="scrollingWindow row p-5">
+    <div class="scrollbar d-flex row">
+      <div class="smalltalkTrack smalltalkSideTrack col m-0 p-0" id="leftSideTrack"></div>
+      <div class="smalltalkTrack col m-0 p-0" id='track'>
+        <div class="smalltalkSlider p-0" id='slider'></div>
+      </div>
+      <div class="smalltalkTrack smalltalkSideTrack col m-0" id="rightSideTrack"></div>
+    </div>
+    <div class="contentBox pl-4 pr-3">
+      <h3>1977: Xerox PARC Smalltalk</h3>
+      </br>
+      <p>
+        SmallTalk was one of the first programs to allow user to grab and move the scrollbar to the desired position in
+        the document. It had three vertical sections, clicking in the left section scrolled down, clicking in the right
+        section scrolled up, and grabbing the center bar allowed the scrollbar to be moved. The center bar will show you
+        the percent that is visible to the user.
+      </p>
+      <p>
+        Smalltalk is an object-oriented, dynamically typed reflective programming language. Smalltalk was created as the
+        language in underpinning the "new world" of computing exemplified by "human–computer symbiosis".[2] It was
+        designed and created in part for educational use, more so for constructionist learning, at the Learning Research
+        Group (LRG) of Xerox PARC by Alan Kay, Dan Ingalls, Adele Goldberg, Ted Kaehler, Scott Wallace, and others
+        during the 1970s.
+      </p>
+      <p>
+        The language was first generally released as Smalltalk-80. Smalltalk-like languages are in continuing active
+        development and have gathered loyal communities of users around them. ANSI Smalltalk was ratified in 1998 and
+        represents the standard version of Smalltalk.[3]
+      </p>
+      <p>
+        Smalltalk took second place for "most loved programming language" in the Stack Overflow Developer Survey in
+        2017,[4] but it was not among the 26 most loved programming languages of the 2018 survey.[5]
+      </p>
+      <p>
+        The language was first generally released as Smalltalk-80. Smalltalk-like languages are in continuing active
+        development and have gathered loyal communities of users around them. ANSI Smalltalk was ratified in 1998 and
+        represents the standard version of Smalltalk.[3]
+      </p>
+    </div>
+  </div>
+
+  <!-- General App Scripts -->
+  <script src="smalltalk.js"></script>
+</body>

@@ -18,6 +18,7 @@ div {
   overflow-y: scroll;
   height: 300px;
   width: 50%;
+  z-index: -1;
 }
 
 .contentBox::-webkit-scrollbar {
@@ -27,4 +28,26 @@ div {
 
 .scrollingWindow {
   height:300px;
+}
+
+#percentage {
+  top : 150px;
+  width : 60px;
+  left : 10px;
+  height : 20px;
+  background-color : lightgrey;
+  text-align : center;
+}
+
+#track {
+  left : 80px;
+  width: 20px;
+  height : 300px;
+  border-left :none;
+  border-right: none;
+}
+
+#slider {
+  position : absolute;
+  width: 18px;
 }

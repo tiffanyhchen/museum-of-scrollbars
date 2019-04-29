@@ -1,0 +1,37 @@
+.smalltalkTrack {
+  background-color: #fff;
+  position: static;
+  width: 40px;
+  padding-left: 0;
+  padding-right: 0;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+}
+
+.smalltalkSideTrack {
+  width: 20px;
+  border: 1pt solid black;
+}
+
+#rightSideTrack {
+  cursor: url(../../assets/cursorUp.png), auto;
+  border-right: none;
+}
+
+#leftSideTrack {
+  cursor: url(../../assets/cursorDown.png), auto;
+  border-left: none;
+}
+
+#track, #slider {
+  cursor: url(../../assets/cursorSide.png), auto;
+}
+
+#track:hover {
+  border: 1pt solid black; 
+}
+
+.smalltalkSlider {
+  background: #cccccc;
+  border: 1pt solid black;
+}
