@@ -300,6 +300,7 @@ div h6 {
     max-width:100%;
     max-height:100%;
     object-fit: contain;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.01), 0 6px 20px 0 rgba(255, 255, 255, 0.01);
 }
 
 #page h5{
