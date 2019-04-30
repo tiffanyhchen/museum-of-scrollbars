@@ -270,7 +270,7 @@ div h6 {
 #page {
     overflow-y: scroll;
     position: relative;
-    height: 300px;
+    height: 400px;
     float: left;
     width: 60%;
     /* height: 70vh; */
@@ -303,7 +303,7 @@ div h6 {
 }
 
 .img-fluid{
-    max-width:100%;
+    max-width:80%;
     max-height:100%;
     object-fit: contain;
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.01), 0 6px 20px 0 rgba(255, 255, 255, 0.01);
@@ -389,7 +389,7 @@ div h6 {
     }
 }
 
-@media (max-width: 700px){
+@media (max-width: 1000px){
     #background, .container{
         visibility: hidden;
     }

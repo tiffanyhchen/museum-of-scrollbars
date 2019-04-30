@@ -4,11 +4,13 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
         <!-- Custom CSS -->
         <link href="styles/styles.css" rel="stylesheet">
         <!-- Scripts -->
         <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
-<!--        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
         <title>Museum of Interaction Techniques — Scrollbars</title>
     </head>
     <body>
@@ -26,23 +28,26 @@
                     </li>
                 </ul>
             </nav>
-            <div id="content">
-                <div id="page">
-                    <h5>iPhone</h5>
-                    <div class="content-year">2007</div>
-                    <div class="detail">
-                        <div class="detail-title">CREATOR</div>
-                        <div class="detail-text">Apple Inc.</div>
-                    </div>
-                    <div>
-                        <div class="detail-title">ABOUT</div>
-                        <p>
-                           The iPhone was a revolutionary phone made by Apple, the first one released in 2007. Development for the phone began in 2004 when Apple gathered 1000 employees to work on a confidential product. The user interface was built around the device’s multi-touch screen and a virtual keyboard. As of 2019, Apple has released twelve generations of iPhones. To scroll, a user simply needed to swipe up or down to scroll, as if you are physically moving the page. Additionally, when a page reaches to the end, the screen will “bounce”.
-                        </p>
+            <div class="row" id="content">
+                <div class="col-6">
+                    <div id="page">
+                        <h5>iPhone</h5>
+                        <div class="content-year">2007</div>
+                        <div class="detail">
+                            <div class="detail-title">CREATOR</div>
+                            <div class="detail-text">Apple Inc.</div>
+                        </div>
+                        <div>
+                            <div class="detail-title">ABOUT</div>
+                            <p>
+                               The iPhone was a revolutionary phone made by Apple, the first one released in 2007. Development for the phone began in 2004 when Apple gathered 1000 employees to work on a confidential product. The user interface was built around the device’s multi-touch screen and a virtual keyboard. As of 2019, Apple has released twelve generations of iPhones. To scroll, a user simply needed to swipe up or down to scroll, as if you are physically moving the page. Additionally, when a page reaches to the end, the screen will “bounce”. This is known as elastic scrolling.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div id="img-content">
-                    <img src="assets/sketchpad1.png" class="img-fluid"/>
+                <div class="col-6 d-flex align-items-center justify-content-center">
+                    <br/>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/IeAePbpAhc8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="mr-3"></iframe>
                 </div>
             </div>
             
