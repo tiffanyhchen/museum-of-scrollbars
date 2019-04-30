@@ -4,11 +4,14 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
         <!-- Custom CSS -->
         <link href="styles/styles.css" rel="stylesheet">
         <!-- Scripts -->
         <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
-<!--        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+        
         <title>Museum of Interaction Techniques — Scrollbars</title>
     </head>
     <body>
@@ -26,23 +29,25 @@
                     </li>
                 </ul>
             </nav>
-            <div id="content">
-                <div id="page">
-                    <h5>Xerox Star</h5>
-                    <div class="content-year">1981</div>
-                    <div class="detail">
-                        <div class="detail-title">CREATOR</div>
-                        <div class="detail-text">Xerox</div>
-                    </div>
-                    <div>
-                        <div class="detail-title">ABOUT</div>
-                        <p>
-                           Introduced in 1981, the Xerox Star was the first workstation that tried to incorporate some of the technologies that are now standard in modern personal computers such as icons, two button mouse, and ethernet networking. The Xerox Star was one of the first systems to have a scrollbar on the right hand side of the window, and to also have a horizontal scrollbar at the bottom of the window. It also had arrow buttons on the top and bottom of the scrollbar that the user could click to move the page. Unlike modern scrollbars, clicking the down arrow, which was located at the top of the screen, moved you further to the beginning of the document. Clicking anywhere in the elevator region would take you to that point in the document. 
-                        </p>
+            <div class="row" id="content">
+                <div class="col-6">
+                    <div id="page">
+                        <h5>Xerox Star</h5>
+                        <div class="content-year">1981</div>
+                        <div class="detail">
+                            <div class="detail-title">CREATOR</div>
+                            <div class="detail-text">Xerox</div>
+                        </div>
+                        <div>
+                            <div class="detail-title">ABOUT</div>
+                            <p>
+                               Introduced in 1981, the Xerox Star was the first workstation that tried to incorporate some of the technologies that are now standard in modern personal computers such as icons, two button mouse, and ethernet networking. The Xerox Star was one of the first systems to have a scrollbar on the right hand side of the window, and to also have a horizontal scrollbar at the bottom of the window. It also had arrow buttons on the top and bottom of the scrollbar that the user could click to move the page. Unlike modern scrollbars, clicking the down arrow, which was located at the top of the screen, moved you further to the beginning of the document. Clicking anywhere in the elevator region would take you to that point in the document. 
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div id="img-content">
-                    <img src="assets/xeroxstar.jpg" class="img-fluid"/>
+                <div class="col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/xeroxstar.jpg" class="img-fluid mr-3"/>
                 </div>
             </div>
             

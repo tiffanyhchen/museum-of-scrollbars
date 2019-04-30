@@ -4,11 +4,14 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
         <!-- Custom CSS -->
         <link href="styles/styles.css" rel="stylesheet">
         <!-- Scripts -->
         <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
-<!--        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+
         <title>Museum of Interaction Techniques — Scrollbars</title>
     </head>
     <body>
@@ -26,23 +29,25 @@
                     </li>
                 </ul>
             </nav>
-            <div id="content">
-                <div id="page">
-                    <h5>Xerox Alto - Bravo</h5>
-                    <div class="content-year">1974</div>
-                    <div class="detail">
-                        <div class="detail-title">CREATOR</div>
-                        <div class="detail-text">Xerox PARC</div>
-                    </div>
-                    <div>
-                        <div class="detail-title">ABOUT</div>
-                        <p>
-                           Bravo was the first WYSIWYG (what you see is what you get) editor on the Xerox Alto personal computer. It had some of the first scrollable interactions on a document that involved a mouse that had three buttons. To scroll, the user would move the cursor to the left margin, and the cursor would change shape to a double arrow. Using the mouse, clicking the left button will scroll up, the right button will scroll down, and the middle button will take the relative vertical mouse position and jump to that relative position in the document. For example, if you clicked the middle button at the top of the left margin, the document will scroll to the very top, and if you click the middle button halfway down the left margin, it will scroll the middle of the document.
-                        </p>
+            <div class="row" id="content">
+                <div class="col-6">
+                    <div id="page">
+                        <h5>Xerox Alto - Bravo</h5>
+                        <div class="content-year">1974</div>
+                        <div class="detail">
+                            <div class="detail-title">CREATOR</div>
+                            <div class="detail-text">Xerox PARC</div>
+                        </div>
+                        <div>
+                            <div class="detail-title">ABOUT</div>
+                            <p>
+                               Bravo was the first WYSIWYG (what you see is what you get) editor on the Xerox Alto personal computer. It had some of the first scrollable interactions on a document that involved a mouse that had three buttons. To scroll, the user would move the cursor to the left margin, and the cursor would change shape to a double arrow. Using the mouse, clicking the left button will scroll up, the right button will scroll down, and the middle button will take the relative vertical mouse position and jump to that relative position in the document. For example, if you clicked the middle button at the top of the left margin, the document will scroll to the very top, and if you click the middle button halfway down the left margin, it will scroll the middle of the document.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div id="img-content">
-                    <img src="assets/bravo.png" class="img-fluid"/>
+                <div class="col-6 d-flex align-items-center justify-content-center">
+                    <img src="assets/bravo.jpeg" class="img-fluid mr-3"/>
                 </div>
             </div>
             
