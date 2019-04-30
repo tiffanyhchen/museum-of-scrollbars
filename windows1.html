@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Custom CSS -->
+        <link href="styles/styles.css" rel="stylesheet">
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
+<!--        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+        <title>Museum of Interaction Techniques — Scrollbars</title>
+    </head>
+    <body>
+        <div data-tilt data-tilt-full-page-listening data-tilt-scale="1.05" data-tilt-speed="100" data-tilt-perspective="3000" id="background"><img src="assets/background.svg" id="background-img" /></div>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <span id="link-title">
+                                Museum of Interaction Techniques
+                            </span><br/>
+                            SCROLLBARS
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="content">
+                <div id="page">
+                    <h5>Microsoft Windows 1.0</h5>
+                    <div class="content-year">1985</div>
+                    <div class="detail">
+                        <div class="detail-title">CREATOR</div>
+                        <div class="detail-text">Microsoft</div>
+                    </div>
+                    <div>
+                        <div class="detail-title">ABOUT</div>
+                        <p>
+                           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                </div>
+                <div id="img-content">
+                    <img src="assets/sketchpad1.png" class="img-fluid"/>
+                </div>
+            </div>
+            
+        </div>
+        <div class="mobile-message" class="visibility: hidden;">
+            <span id="sorry">SORRY!</span><br/>
+            Your device is not supported. Please view this on a desktop browser of 1280px.
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+        <script>
+            VanillaTilt.init(document.querySelectorAll("#background"), {
+                max: 3,
+                speed: 100,
+                perspective: 3000,
+                glare: true,
+                scale: 1.05,
+                easing: "cubic-bezier(.03,.98,.52,.99)",
+                transition: true,
+                gyroscope: false
+            });
+        </script>
+    </body>
+</html>

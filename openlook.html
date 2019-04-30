@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Custom CSS -->
+        <link href="styles/styles.css" rel="stylesheet">
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
+<!--        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+        <title>Museum of Interaction Techniques — Scrollbars</title>
+    </head>
+    <body>
+        <div data-tilt data-tilt-full-page-listening data-tilt-scale="1.05" data-tilt-speed="100" data-tilt-perspective="3000" id="background"><img src="assets/background.svg" id="background-img" /></div>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <span id="link-title">
+                                Museum of Interaction Techniques
+                            </span><br/>
+                            SCROLLBARS
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="content">
+                <div id="page">
+                    <h5>OPENLOOK</h5>
+                    <div class="content-year">1988</div>
+                    <div class="detail">
+                        <div class="detail-title">CREATOR</div>
+                        <div class="detail-text">Sun Microsystems and AT&T Corporation</div>
+                    </div>
+                    <div>
+                        <div class="detail-title">ABOUT</div>
+                        <p>
+                           OPENLOOK was one of the first standard graphical user interfaces for Unix that was defined in the late 1980s by Sun Microsystems and AT&T. The scrollbar had up and down arrows attached to the top and bottom of the bar. The users were able to click and drag on these to control the direction and distance of the scroll. Along with dragging and dropping in the system.
+
+                        </p>
+                    </div>
+                </div>
+                <div id="img-content">
+                    <img src="assets/sketchpad1.png" class="img-fluid"/>
+                </div>
+            </div>
+            
+        </div>
+        <div class="mobile-message" class="visibility: hidden;">
+            <span id="sorry">SORRY!</span><br/>
+            Your device is not supported. Please view this on a desktop browser of 1280px.
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+        <script>
+            VanillaTilt.init(document.querySelectorAll("#background"), {
+                max: 3,
+                speed: 100,
+                perspective: 3000,
+                glare: true,
+                scale: 1.05,
+                easing: "cubic-bezier(.03,.98,.52,.99)",
+                transition: true,
+                gyroscope: false
+            });
+        </script>
+    </body>
+</html>
