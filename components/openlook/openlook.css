@@ -1,0 +1,35 @@
+.openlookBtn {
+  margin:0;
+  width: 20px;
+  height: 40px;
+  background-color: #fff;
+}
+
+.openlookPageBtn {
+  height: 10px;
+}
+
+.openlookArrow {
+  height:10px;
+  margin-left: 1px;
+  /* width:10px; */
+}
+
+.openlookTrack {
+}
+
+.openlookSlider {
+
+}
+
+.openlookElevator {
+  background-color: #fff;
+  width: 20px;
+  height: 60px;
+}
+
+.line {
+  position: fixed;
+  height: 300px;
+  transform: translate(900%);
+}
