@@ -1,0 +1,29 @@
+.starBtn {
+  margin:0;
+  width: 20px;
+  background-color: #fff;
+  border: 1pt solid black;
+}
+
+.starPageBtn {
+}
+
+.starArrow {
+  height:30px;
+  margin-left: 1px;
+  /* width:10px; */
+}
+
+.starTrack {
+  background-color: #fff;
+  cursor: url(../../assets/starCursor.png), auto;
+}
+
+.starSlider {
+  display: none;
+  background: transparent;
+}
+
+.starSlider img {
+  width: 18px;
+}

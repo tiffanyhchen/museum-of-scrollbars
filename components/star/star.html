@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Tiffany Chen, Jason Deng, Dylan Hyun">
+  <meta name="keywords"
+    content="Interaction Techniques, Scrollbars, Carnegie Mellon, Pittsburgh, CMU, Carnegie Mellon University">
+  <meta name="Museum of Scrollbars">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Museum of Scrollbars</title>
+
+  <!-- <link rel="icon" href="./assets/logo.png" type="image/png" sizes="16x16"> -->
+
+
+  <!-- %%%% STYLES %%%% -->
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+
+  <!-- General App Styles -->
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="star.css">
+
+  <!-- %%%% END STYLES %%%% -->
+
+  <!-- %%%% SCRIPTS %%%% -->
+
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Boostrap -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+
+  <!-- General App Scripts
+  <script src="macintosh.js"></script> -->
+
+  <!-- %%%% END SCRIPTS %%%% -->
+
+</head>
+
+<body>
+  <h1>Star 1981</h1>
+
+  <div id='percentage'>0&#37;</div>
+  <div class="scrollingWindow row p-4">
+    <div class="contentBox pl-3 pr-3">
+      <h3>1981: Xerox Star</h3>
+      </br>
+      <p>
+        Introduced in 1981, the Xerox Star was the first workstation that tried to incorporate some of the technologies
+        that are now standard in modern personal computers such as icons, two button mouse, and ethernet networking. The
+        Xerox Star was one of the first systems to have a scrollbar on the right hand side of the window, and to also
+        have a horizontal scrollbar at the bottom of the window. It also had arrow buttons on the top and bottom of the
+        scrollbar that the user could click to move the page. Unlike modern scrollbars, clicking the down arrow, which
+        was located at the top of the screen, moved you further to the beginning of the document. Clicking anywhere in
+        the elevator region would take you to that point in the document.
+      </p>
+      <p>
+        The Star was developed at Xerox's Systems Development Department (SDD) in El Segundo, California, which had been
+        established in 1977[citation needed] under the direction of Don Massaro. A section of SDD, SDD North, was
+        located in Palo Alto, California, and included some people borrowed from PARC. SDD's mission was to design the
+        "Office of the future", a new system that would incorporate the best features of the Alto, was easy to use, and
+        could automate many office tasks.
+      </p>
+      <p>
+        The development team was headed by David Liddle, and would eventually grow to more than 200 developers. A good
+        part of the first year was taken up by meetings and planning, the result of which was an extensive and detailed
+        functional specification, internally termed the "Red Book". This became the bible for all development tasks. It
+        defined the interface and enforced consistency in all modules and tasks. All changes to the functional
+        specification had to be approved by a review team which maintained standards rigorously.
+      </p>
+      <p>
+        The key philosophy of the user interface was to mimic the office paradigm as much as possible in order to make
+        it intuitive for users. The concept of what you see is what you get (WYSIWYG) was considered paramount. Text
+        would be displayed as black on a white background, just like paper, and the printer would replicate the screen
+        using Interpress, a page description language developed at PARC.
+      </p>
+    </div>
+    <div class="scrollbar">
+      <button class="starBtn d-flex align-items-center justify-content-center" id="upBtn">
+        <img src="../../assets/starArrowDown.png" class="starArrow">
+      </button>
+      <button class="starBtn starPageBtn d-flex align-items-center justify-content-center" id="upPageBtn">
+        <b>-</b>
+      </button>
+      <div class="starTrack border border-dark" id='track'>
+        <div class="starSlider" id='slider'>
+          <img src="../../assets/starSlider.png">
+        </div>
+      </div>
+      <button class="starBtn starPageBtn d-flex align-items-center justify-content-center" id="downPageBtn">
+        <b>+</b>
+      </button>
+      <button class="starBtn d-flex align-items-center justify-content-center" id="downBtn">
+        <img src="../../assets/starArrowUp.png" class="starArrow">
+      </button>
+    </div>
+  </div>
+
+  <!-- General App Scripts -->
+  <script src="star.js"></script>
+</body>
