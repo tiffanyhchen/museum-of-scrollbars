@@ -4,7 +4,7 @@ document.onselectstart = function (e) { e.preventDefault(); return false; };
 //create handles for elements that were instantiated in the HTML markup:
 var slider = document.getElementById('slider');
 var track = document.getElementById('track');
-// var percentage = document.getElementById('percentage');
+var percentage = document.getElementById('percentage');
 var upBtn = document.getElementById('upBtn');
 var downBtn = document.getElementById('downBtn');
 var contentBox = document.getElementsByClassName('contentBox')[0];
@@ -59,34 +59,40 @@ slider.onclick = function(e) {
 }
 
 // Button mouse event functions
+upPageBtn.onclick = function(e) {
+  moveSlider(slider.viewpointTop)}
+
+downPageBtn.onclick = function(e) {
+  moveSlider(slider.viewpointBottom - getAtInt(slider,'height'))
+}
+
 upBtn.onclick = function(e) {
-  console.log("up button clicked")
-  pageHeight = 20
-  moveSlider(Math.max(slider.lastMousePosY - pageHeight, slider.viewpointTop))}
+  console.log("up button pressed")
+  y = 10
+  moveSlider(Math.max(slider.lastMousePosY - y, slider.viewpointTop))
+}
 
 downBtn.onclick = function(e) {
-  console.log("down button clicked")
-  pageHeight = 20
-  // console.log("last y pos: "+slider.lastMousePosY)
-  // console.log("new y pos: "+Math.min(slider.lastMousePosY + pageHeight, slider.viewpointBottom - getAtInt(slider,'height')))
-  moveSlider(Math.min(slider.lastMousePosY + pageHeight, slider.viewpointBottom - getAtInt(slider,'height')))
+  console.log("down button pressed")
+  y = 10
+  moveSlider(Math.min(slider.lastMousePosY + y, slider.viewpointBottom - getAtInt(slider,'height')))
 }
 
-upBtn.onmousedown = function(e) {
-  document.getElementsByClassName('macintoshArrow')[0].src = "./assets/arrowUpFilled.png"
-}
+// upBtn.onmousedown = function(e) {
+//   document.getElementsByClassName('macintoshArrow')[0].src = "../../assets/arrowUpFilled.png"
+// }
 
-upBtn.onmouseup = function(e) {
-  document.getElementsByClassName('macintoshArrow')[0].src = "./assets/arrowUp.png"
-}
+// upBtn.onmouseup = function(e) {
+//   document.getElementsByClassName('macintoshArrow')[0].src = "../../assets/arrowUp.png"
+// }
 
-downBtn.onmousedown = function(e) {
-  document.getElementsByClassName('macintoshArrow')[1].src = "./assets/arrowDownFilled.png"
-}
+// downBtn.onmousedown = function(e) {
+//   document.getElementsByClassName('macintoshArrow')[1].src = "../../assets/arrowDownFilled.png"
+// }
 
-downBtn.onmouseup = function(e) {
-  document.getElementsByClassName('macintoshArrow')[1].src = "./assets/arrowDown.png"
-}
+// downBtn.onmouseup = function(e) {
+//   document.getElementsByClassName('macintoshArrow')[1].src = "../../assets/arrowDown.png"
+// }
 
 //Helper function. Not strictly required, but will make the logic down the bottom
 //easier to follow by simplifying nested parens. It will get an element's style, ie. 10px, and return just the 10 as an integer:
@@ -118,7 +124,7 @@ function moveSlider(proposedNewPosY) {
   // for this example we will compute the slider's percentage and update the grey box:
   slider.percentage = ((parseInt(slider.style.marginTop, 10)) / (parseInt(track.style.height, 10) - parseInt(slider.style.height, 10)));
 
-  // percentage.textContent = slider.percentage;  //.innerText will not work for Firefox
+  percentage.textContent = slider.percentage;  //.innerText will not work for Firefox
   updateContentBox(slider.percentage)
 }
 

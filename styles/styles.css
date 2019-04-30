@@ -33,6 +33,7 @@ body{
     position: absolute; 
     top: 0px;
     left: 0px;
+    max-width: 100%;
 }
 
 nav ul {
@@ -50,6 +51,11 @@ nav ul {
 a {
     text-decoration: none;
     color: #ffffff;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ffffff; 
 }
 
 /* Main Page Load with Easing */
@@ -266,8 +272,8 @@ div h6 {
     position: relative;
     height: 300px;
     float: left;
-    width: 30%;
-    height: 70vh;
+    width: 60%;
+    /* height: 70vh; */
     margin-left: 5em;
     padding-left: 1.25em;
     direction:rtl; 
@@ -293,7 +299,7 @@ div h6 {
     max-width: 55vw;
     position: relative;
     height: 70vh;
-    margin-left: 3em;
+    /* margin-right: 3em; */
 }
 
 .img-fluid{
@@ -357,11 +363,11 @@ div h6 {
     }
     
     #page{
-        margin-bottom: 5em;
+        /* margin-bottom: 5em; */
     }
     
     #img-content{
-        margin-left: 5em;
+        /* margin-left: 5em; */
     }
     
     .left-side{
