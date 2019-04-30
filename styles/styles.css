@@ -272,7 +272,7 @@ div h6 {
     position: relative;
     height: 300px;
     float: left;
-    /* width: 60%; */
+    width: 60%;
     /* height: 70vh; */
     margin-left: 5em;
     padding-left: 1.25em;
@@ -362,11 +362,11 @@ div h6 {
     }
     
     #page{
-        margin-bottom: 5em;
+        /* margin-bottom: 5em; */
     }
     
     #img-content{
-        margin-left: 5em;
+        /* margin-left: 5em; */
     }
     
     .left-side{
