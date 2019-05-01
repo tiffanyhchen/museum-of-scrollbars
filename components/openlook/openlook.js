@@ -8,6 +8,7 @@ var percentage = document.getElementById('percentage');
 var upBtn = document.getElementById('upBtn');
 var downBtn = document.getElementById('downBtn');
 var contentBox = document.getElementsByClassName('contentBox')[0];
+var elevator = slider.getElementsByClassName('openlookElevator')[0]
 var boxHeight = 90;
 
 //initial states variables, append to their elements:
@@ -40,22 +41,34 @@ document.onmousedown = function () {
 document.onmouseup = function () {
   document.mouseState = 'up';
   slider.mouseState = 'up';
+  elevator.style.filter = "invert(0)"
+  downBtn.style.filter = "invert(0)"
 };
 
 //Slider mouse event functions:
-slider.onmousedown = function (e) {
+slider.onmousedown = function(e) {
   slider.lastMousePosY = e.pageY;  //<-this is so that if you lift the mouse, move it and grab the slider again, it will not jump.
   slider.mouseState = 'down';
   document.mouseState = 'down';
 };
 
-slider.onmouseup = function (e) {
+slider.onmouseup = function(e) {
   slider.mouseState = 'up';
   document.mouseState = 'up';
+  elevator.style.filter = "invert(0)"
 };
 
 slider.onclick = function(e) {
   slider.clicked = true 
+}
+
+
+elevator.onmousedown = function(e) {
+  elevator.style.filter = "invert(1)"
+}
+
+elevator.onmouseup = function(e) {
+  elevator.style.filter = "invert(0)"
 }
 
 // Button mouse event functions
@@ -66,16 +79,48 @@ downPageBtn.onclick = function(e) {
   moveSlider(slider.viewpointBottom - getAtInt(slider,'height'))
 }
 
+upPageBtn.onmousedown = function(e) {
+  upPageBtn.style.filter = "invert(1)"
+}
+
+upPageBtn.onmouseup = function(e) {
+  upPageBtn.style.filter = "invert(0)"
+}
+
+downPageBtn.onmousedown = function(e) {
+  downPageBtn.style.filter = "invert(1)"
+}
+
+downPageBtn.onmouseup = function(e) {
+  downPageBtn.style.filter = "invert(0)"
+}
+
 upBtn.onclick = function(e) {
   console.log("up button pressed")
-  y = 10
+  y = 20
   moveSlider(Math.max(slider.lastMousePosY - y, slider.viewpointTop))
 }
 
 downBtn.onclick = function(e) {
   console.log("down button pressed")
-  y = 10
-  moveSlider(Math.min(slider.lastMousePosY + y, slider.viewpointBottom - getAtInt(slider,'height')))
+  y = 20
+  moveSlider(Math.min(slider.lastMousePosY + y - getAtInt(slider,'height'), slider.viewpointBottom - getAtInt(slider,'height')))
+}
+
+upBtn.onmousedown = function(e) {
+  upBtn.style.filter = "invert(1)"
+}
+
+upBtn.onmouseup = function(e) {
+  upBtn.style.filter = "invert(0)"
+}
+
+downBtn.onmousedown = function(e) {
+  downBtn.style.filter = "invert(1)"
+}
+
+downBtn.onmouseup = function(e) {
+  downBtn.style.filter = "invert(0)"
 }
 
 // upBtn.onmousedown = function(e) {
@@ -188,11 +233,13 @@ function movePagefull(e) {
 }
 
 function movePageDown() {
+  console.log("track page down")
   pageHeight = boxHeight
   moveSlider(Math.min(slider.lastMousePosY + pageHeight, slider.viewpointBottom - getAtInt(slider,'height')))
 }
 
 function movePageUp() {
+  console.log("track page up")
   pageHeight = boxHeight
   moveSlider(Math.max(slider.lastMousePosY - pageHeight, slider.viewpointTop))
 }
