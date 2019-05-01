@@ -388,6 +388,11 @@ div h6 {
     }
 }
 
+#no-scrollbar{
+    max-width: 40%;
+    margin-left: 5em;
+}
+
 @media (max-width: 1000px){
     #background, .container{
         visibility: hidden;
