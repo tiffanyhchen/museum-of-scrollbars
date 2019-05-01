@@ -147,7 +147,7 @@ function moveSlider(proposedNewPosY) {
   // for this example we will compute the slider's percentage and update the grey box:
   slider.percentage = ((parseInt(slider.style.marginTop, 10)) / (parseInt(track.style.height, 10) - parseInt(slider.style.height, 10)));
 
-  percentage.textContent = slider.percentage;  //.innerText will not work for Firefox
+  // percentage.textContent = slider.percentage;  //.innerText will not work for Firefox
   updateContentBox(slider.percentage)
 }
 
@@ -196,7 +196,7 @@ function movePageToSpot(pageY) {
   track.percentage = pageY / (parseInt(track.style.height) + track.viewpointTop)
   console.log("track percentage: "+track.percentage)
   console.log("newposy: "+getAtInt(track, 'height') * track.percentage)
-  percentage.textContent = track.percentage;  //.innerText will not work for Firefox
+  // percentage.textContent = track.percentage;  //.innerText will not work for Firefox
   newY = track.percentage * (parseInt(track.style.height, 10) - parseInt(slider.style.height, 10)) + slider.viewpointTop
   console.log("new y: "+newY)
   moveSlider(newY)

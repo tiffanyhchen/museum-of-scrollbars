@@ -11,6 +11,7 @@
 .smalltalkSideTrack {
   width: 20px;
   border: 1pt solid black;
+  height: 300px;
 }
 
 #rightSideTrack {
@@ -34,4 +35,5 @@
 .smalltalkSlider {
   background: #cccccc;
   border: 1pt solid black;
+  width: 30px;
 }

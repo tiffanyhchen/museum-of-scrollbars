@@ -9,16 +9,13 @@
   height: 7px;
 }
 
+.openlookTrack {
+  background-color: #fff;
+}
+
 .openlookArrow {
   height:10px;
   /* margin-left: 1px; */
-}
-
-.openlookTrack {
-}
-
-.openlookSlider {
-
 }
 
 .openlookElevator {

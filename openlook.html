@@ -1,74 +1,128 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
         integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-        <!-- Custom CSS -->
-        <link href="styles/styles.css" rel="stylesheet">
-        <!-- Scripts -->
-        <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
-        
-        <title>Museum of Interaction Techniques — Scrollbars</title>
-    </head>
-    <body>
-        <div data-tilt data-tilt-full-page-listening data-tilt-scale="1.05" data-tilt-speed="100" data-tilt-perspective="3000" id="background"><img src="assets/background.svg" id="background-img" /></div>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="index.html">
-                            <span id="link-title">
-                                Museum of Interaction Techniques
-                            </span><br/>
-                            SCROLLBARS
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="row" id="content">
-                <div class="col-6">
-                    <div id="page">
+    <!-- Custom CSS -->
+    <link href="styles/styles.css" rel="stylesheet">
+    <link href="./components/scrollbarStyles.css" rel="stylesheet">
+    <link href="./components/openlook/openlook.css" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js"
+        integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
+
+    <title>Museum of Interaction Techniques — Scrollbars</title>
+</head>
+
+<body>
+    <div data-tilt data-tilt-full-page-listening data-tilt-scale="1.05" data-tilt-speed="100"
+        data-tilt-perspective="3000" id="background"><img src="assets/background.svg" id="background-img" /></div>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span id="link-title">
+                            Museum of Interaction Techniques
+                        </span><br />
+                        SCROLLBARS
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="row" id="content">
+            <div class="col-6">
+                <div class="scrollingWindow d-flex row pl-5 ml-3">
+                    <div class="contentBox col-8" id="page">
                         <h5>OPENLOOK</h5>
                         <div class="content-year">1988</div>
                         <div class="detail">
                             <div class="detail-title">CREATOR</div>
                             <div class="detail-text">Sun Microsystems and AT&T Corporation</div>
                         </div>
+                        <div class="detail">
+                            <div class="detail-title">HOW TO USE THE SCROLLBAR</div>
+                            <p>
+                                The scrollbar has up and down
+                                arrows attached to the top and bottom of the bar. A user can click and drag
+                                on these to control the direction and distance of the scroll. Along with dragging and
+                                dropping in the system. Clicking on the "cable anchors", located at the top and bottom,
+                                let the user go to the beginning or end of the document. Originally, clicking and
+                                holding down the mouse button on the arrow keys repeated the opperation, and the cursor
+                                transported automatically with the moving elevator. Unfortunately modern browsers do not
+                                allow the cursor to be move programatically so this was not implemented on this version.
+                            </p>
+                        </div>
                         <div>
                             <div class="detail-title">ABOUT</div>
                             <p>
-                               OPENLOOK was one of the first standard graphical user interfaces for Unix that was defined in the late 1980s by Sun Microsystems and AT&T. The scrollbar had up and down arrows attached to the top and bottom of the bar. The users were able to click and drag on these to control the direction and distance of the scroll. Along with dragging and dropping in the system.
+                                OPENLOOK was one of the first standard graphical user interfaces for Unix that was
+                                defined in the late 1980s by Sun Microsystems and AT&T. It was created at a time
+                                when there was little or no standardization in Unix graphical user interfaces (GUIs);
+                                the X Window System was emerging as the likely de facto standard for Unix graphical
+                                displays, but its designers had deliberately chosen not to specify any look and feel
+                                guidelines, leaving this up to application and window manager developers.
 
                             </p>
                         </div>
                     </div>
-                </div>
-                <div class="col-6 d-flex align-items-center justify-content-center">
-                    <img src="assets/openlook.png" class="img-fluid"/>
+                    <div class="scrollbar">
+                        <button
+                            class="openlookBtn openlookPageBtn d-flex align-items-center justify-content-center border border-dark mb-1"
+                            id="upPageBtn">
+                        </button>
+                        <div class="openlookTrack" id='track'>
+                            <div class="line border-right border-dark"></div>
+                            <div class="openlookSlider d-flex flex-column" id="slider">
+                                <button
+                                    class="openlookBtn openlookArrowButton border-dark border-top border-left border-right rounded-top d-flex align-items-center justify-content-center"
+                                    id="upBtn">
+                                    <img src="./assets/arrowUpFilled.png" class="openlookArrow">
+                                </button>
+                                <div class="openlookElevator border-left border-right border-dark"></div>
+                                <button
+                                    class="openlookBtn openlookArrowButton border-dark border-bottom border-left border-right rounded-bottom d-flex align-items-center justify-content-center"
+                                    id="downBtn">
+                                    <img src="./assets/arrowDownFilled.png" class="openlookArrow">
+                                </button>
+                            </div>
+                        </div>
+                        <button
+                            class="openlookBtn openlookPageBtn d-flex align-items-center justify-content-center border border-dark mt-1"
+                            id="downPageBtn">
+                        </button>
+                    </div>
                 </div>
             </div>
-            
+            <div class="col-6 d-flex align-items-center justify-content-center">
+                <img src="assets/openlook.png" class="img-fluid" />
+            </div>
         </div>
-        <div class="mobile-message" class="visibility: hidden;">
-            <span id="sorry">SORRY!</span><br/>
-            Your device is not supported. Please view this on a desktop browser of 1280px.
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-        <script>
-            VanillaTilt.init(document.querySelectorAll("#background"), {
-                max: 3,
-                speed: 100,
-                perspective: 3000,
-                glare: true,
-                scale: 1.05,
-                easing: "cubic-bezier(.03,.98,.52,.99)",
-                transition: true,
-                gyroscope: false
-            });
-        </script>
-    </body>
+
+    </div>
+    <div class="mobile-message" class="visibility: hidden;">
+        <span id="sorry">SORRY!</span><br />
+        Your device is not supported. Please view this on a desktop browser of 1280px.
+    </div>
+    <script src="./components/openlook/openlook.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll("#background"), {
+            max: 3,
+            speed: 100,
+            perspective: 3000,
+            glare: true,
+            scale: 1.05,
+            easing: "cubic-bezier(.03,.98,.52,.99)",
+            transition: true,
+            gyroscope: false
+        });
+    </script>
+</body>
+
 </html>

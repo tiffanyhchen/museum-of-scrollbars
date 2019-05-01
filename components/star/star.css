@@ -16,7 +16,7 @@
 
 .starTrack {
   background-color: #fff;
-  cursor: url(../../assets/starCursor.png), auto;
+  cursor: url(./assets/starCursor.png), auto;
 }
 
 .starSlider {

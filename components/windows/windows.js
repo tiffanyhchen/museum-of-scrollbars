@@ -4,13 +4,11 @@ document.onselectstart = function (e) { e.preventDefault(); return false; };
 //create handles for elements that were instantiated in the HTML markup:
 var slider = document.getElementById('slider');
 var track = document.getElementById('track');
-var leftTrack = document.getElementsByClassName('smalltalkSideTrack')[0];
-var rightTrack = document.getElementsByClassName('smalltalkSideTrack')[1];
-console.log(leftTrack)
-console.log(rightTrack)
-var percentage = document.getElementById('percentage');
+// var percentage = document.getElementById('percentage');
+var upBtn = document.getElementById('upBtn');
+var downBtn = document.getElementById('downBtn');
 var contentBox = document.getElementsByClassName('contentBox')[0];
-var boxHeight = 20;
+var boxHeight = 90;
 
 //initial states variables, append to their elements:
 document.mouseState = 'up';
@@ -18,6 +16,8 @@ slider.mouseState = 'up';
 slider.viewpointTop = track.getBoundingClientRect().top;
 slider.viewpointBottom = track.getBoundingClientRect().bottom
 slider.lastMousePosY = slider.viewpointTop;
+console.log(slider.lastMousePosY)
+console.log(contentBox.scrollHeight)
 slider.proposedNewPosY = 0;
 slider.percentage = 0;
 
@@ -58,15 +58,34 @@ slider.onclick = function(e) {
   slider.clicked = true 
 }
 
-// Side track event functions
-leftTrack.onclick = function(e) {
-  console.log("clicked left track")
-  movePageUp();
+// Button mouse event functions
+upBtn.onclick = function(e) {
+  console.log("up button clicked")
+  pageHeight = 20
+  moveSlider(Math.max(slider.lastMousePosY - pageHeight, slider.viewpointTop))}
+
+downBtn.onclick = function(e) {
+  console.log("down button clicked")
+  pageHeight = 20
+  // console.log("last y pos: "+slider.lastMousePosY)
+  // console.log("new y pos: "+Math.min(slider.lastMousePosY + pageHeight, slider.viewpointBottom - getAtInt(slider,'height')))
+  moveSlider(Math.min(slider.lastMousePosY + pageHeight, slider.viewpointBottom - getAtInt(slider,'height')))
 }
 
-rightTrack.onclick = function(e) {
-  console.log("clicked right track")
-  movePageDown();
+upBtn.onmousedown = function(e) {
+  upBtn.style.filter = "invert(1)"
+}
+
+upBtn.onmouseup = function(e) {
+  upBtn.style.filter = "invert(0)"
+}
+
+downBtn.onmousedown = function(e) {
+  downBtn.style.filter = "invert(1)"
+}
+
+downBtn.onmouseup = function(e) {
+  downBtn.style.filter = "invert(0)"
 }
 
 //Helper function. Not strictly required, but will make the logic down the bottom
@@ -133,6 +152,34 @@ document.onmousemove = function (e) {
   // place other slider logic block(s) here for more sliders on the page or for some other moving element:
   //if ((document.mouseState === 'down') && (someOtherSlider.mouseState === 'down')) {   .......
 };
+
+// Track mouse event functions:
+// track.onclick = function (e) {
+//   if (notClickingSlider(e)) {
+//     console.log("clicked outside slider")
+//     movePagefull(e)
+//   }
+// }
+
+function notClickingSlider(e) {
+  if (slider.clicked) {
+    slider.clicked = false
+    return false
+  } else {
+    slider.clicked = false
+    return true
+  }
+}
+
+function movePagefull(e) {
+  console.log(slider.lastMousePosY)
+  console.log(e.pageY)
+  if (e.pageY > slider.lastMousePosY) {
+    movePageDown()
+  } else {
+    movePageUp()
+  }
+}
 
 function movePageDown() {
   pageHeight = boxHeight

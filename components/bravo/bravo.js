@@ -39,16 +39,16 @@ track.addEventListener('contextmenu', event => event.preventDefault());
 
 track.onmousedown = function(e) {
   if (e.button == 0) {
-    track.style.cursor = "url('../../assets/bravoCursorUp.png'), auto"
+    track.style.cursor = "url('./assets/bravoCursorUp.png'), auto"
   } else if (e.button == 1) {
-    track.style.cursor = "url('../../assets/bravoCursorSide.png'), auto"
+    track.style.cursor = "url('./assets/bravoCursorSide.png'), auto"
   }else if (e.button == 2) {
-    track.style.cursor = "url('../../assets/bravoCursorDown.png'), auto"
+    track.style.cursor = "url('./assets/bravoCursorDown.png'), auto"
   }
 }
 
 track.onmouseup = function(e) {
-  track.style.cursor = "url('../../assets/bravoCursorNeutral.png'), auto"
+  track.style.cursor = "url('./assets/bravoCursorNeutral.png'), auto"
   if (e.button == 0) {
     movePageDown()
   } else if (e.button == 1) {
@@ -75,7 +75,7 @@ function movePage(proposedNewPosY) {
   // for this example we will compute the slider's percentage and update the grey box:
   track.percentage = (proposedNewPosY-track.viewpointTop) / (parseInt(track.style.height));
   console.log("track percentage: "+track.percentage)
-  percentage.textContent = track.percentage;  //.innerText will not work for Firefox
+  // percentage.textContent = track.percentage;  //.innerText will not work for Firefox
   updateContentBox(track.percentage)
 }
 
@@ -99,7 +99,7 @@ function movePageUp() {
 function movePageToSpot(pageY) {
   track.percentage = pageY / (parseInt(track.style.height) + track.viewpointTop)
   console.log("track percentage: "+track.percentage)
-  percentage.textContent = track.percentage;  //.innerText will not work for Firefox
+  // percentage.textContent = track.percentage;  //.innerText will not work for Firefox
   updateContentBox(track.percentage)
 }
 

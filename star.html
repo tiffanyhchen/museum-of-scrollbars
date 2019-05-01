@@ -1,73 +1,125 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
         integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-        <!-- Custom CSS -->
-        <link href="styles/styles.css" rel="stylesheet">
-        <!-- Scripts -->
-        <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
-        
-        <title>Museum of Interaction Techniques — Scrollbars</title>
-    </head>
-    <body>
-        <div data-tilt data-tilt-full-page-listening data-tilt-scale="1.05" data-tilt-speed="100" data-tilt-perspective="3000" id="background"><img src="assets/background.svg" id="background-img" /></div>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="index.html">
-                            <span id="link-title">
-                                Museum of Interaction Techniques
-                            </span><br/>
-                            SCROLLBARS
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="row" id="content">
-                <div class="col-6">
-                    <div id="page">
+    <!-- Custom CSS -->
+    <link href="styles/styles.css" rel="stylesheet">
+    <link href="./components/scrollbarStyles.css" rel="stylesheet">
+    <link href="./components/star/star.css" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js"
+        integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
+
+    <title>Museum of Interaction Techniques — Scrollbars</title>
+</head>
+
+<body>
+    <div data-tilt data-tilt-full-page-listening data-tilt-scale="1.05" data-tilt-speed="100"
+        data-tilt-perspective="3000" id="background"><img src="assets/background.svg" id="background-img" /></div>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span id="link-title">
+                            Museum of Interaction Techniques
+                        </span><br />
+                        SCROLLBARS
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="row" id="content">
+            <div class="col-6">
+                <div class="scrollingWindow d-flex row pl-5 ml-3">
+                    <div class="contentBox col-8" id="page">
                         <h5>Xerox Star</h5>
                         <div class="content-year">1981</div>
                         <div class="detail">
                             <div class="detail-title">CREATOR</div>
                             <div class="detail-text">Xerox</div>
                         </div>
+                        <div class="detail">
+                            <div class="detail-title">HOW TO USE THE SCROLLBAR</div>
+                            <p>
+                                One can use the arrow buttons to scroll the page up or down. The plus buttons scrolls to
+                                the top of the next page, and the minus buttons scrolls to the top of the previous page.
+                                The elevator shows which page is currently being viewed. Clicking anywhere in the
+                                elevator region takes you to that point in the document.
+                            </p>
+                        </div>
                         <div>
                             <div class="detail-title">ABOUT</div>
                             <p>
-                               Introduced in 1981, the Xerox Star was the first workstation that tried to incorporate some of the technologies that are now standard in modern personal computers such as icons, two button mouse, and ethernet networking. The Xerox Star was one of the first systems to have a scrollbar on the right hand side of the window, and to also have a horizontal scrollbar at the bottom of the window. It also had arrow buttons on the top and bottom of the scrollbar that the user could click to move the page. Unlike modern scrollbars, clicking the down arrow, which was located at the top of the screen, moved you further to the beginning of the document. Clicking anywhere in the elevator region would take you to that point in the document. 
+                                Introduced in 1981, the Xerox Star was the first workstation that tried to incorporate
+                                some of the technologies that are now standard in modern personal computers such as
+                                icons, two button mouse, and ethernet networking. The Xerox Star was one of the first
+                                systems to have a scrollbar on the right hand side of the window, and to also have a
+                                horizontal scrollbar at the bottom of the window. The Star was developed at Xerox's
+                                Systems Development Department (SDD) in El Segundo, California, which had been
+                                established in 1977 under the direction of Don Massaro. A section of
+                                SDD, SDD North, was
+                                located in Palo Alto, California, and included some people borrowed from PARC. SDD's
+                                mission was to design the
+                                "Office of the future", a new system that would incorporate the best features of the
+                                Alto, was easy to use, and
+                                could automate many office tasks.
                             </p>
                         </div>
                     </div>
-                </div>
-                <div class="col-6 d-flex align-items-center justify-content-center">
-                        <img src="assets/xeroxstar.jpg" class="img-fluid mr-3"/>
+                    <div class="scrollbar">
+                        <button class="starBtn d-flex align-items-center justify-content-center" id="upBtn">
+                            <img src="./assets/starArrowDown.png" class="starArrow">
+                        </button>
+                        <button class="starBtn starPageBtn d-flex align-items-center justify-content-center"
+                            id="upPageBtn">
+                            <b>-</b>
+                        </button>
+                        <div class="starTrack border border-dark" id='track'>
+                            <div class="starSlider" id='slider'>
+                                <img src="./assets/starSlider.png">
+                            </div>
+                        </div>
+                        <button class="starBtn starPageBtn d-flex align-items-center justify-content-center"
+                            id="downPageBtn">
+                            <b>+</b>
+                        </button>
+                        <button class="starBtn d-flex align-items-center justify-content-center" id="downBtn">
+                            <img src="./assets/starArrowUp.png" class="starArrow">
+                        </button>
+                    </div>
                 </div>
             </div>
-            
+            <div class="col-6 d-flex align-items-center justify-content-center">
+                <img src="assets/xeroxstar.jpg" class="img-fluid mr-3" />
+            </div>
         </div>
-        <div class="mobile-message" class="visibility: hidden;">
-            <span id="sorry">SORRY!</span><br/>
-            Your device is not supported. Please view this on a desktop browser of 1280px.
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-        <script>
-            VanillaTilt.init(document.querySelectorAll("#background"), {
-                max: 3,
-                speed: 100,
-                perspective: 3000,
-                glare: true,
-                scale: 1.05,
-                easing: "cubic-bezier(.03,.98,.52,.99)",
-                transition: true,
-                gyroscope: false
-            });
-        </script>
-    </body>
+
+    </div>
+    <div class="mobile-message" class="visibility: hidden;">
+        <span id="sorry">SORRY!</span><br />
+        Your device is not supported. Please view this on a desktop browser of 1280px.
+    </div>
+    <script src="./components/star/star.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll("#background"), {
+            max: 3,
+            speed: 100,
+            perspective: 3000,
+            glare: true,
+            scale: 1.05,
+            easing: "cubic-bezier(.03,.98,.52,.99)",
+            transition: true,
+            gyroscope: false
+        });
+    </script>
+</body>
+
 </html>

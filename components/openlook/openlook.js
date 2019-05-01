@@ -169,7 +169,7 @@ function moveSlider(proposedNewPosY) {
   // for this example we will compute the slider's percentage and update the grey box:
   slider.percentage = ((parseInt(slider.style.marginTop, 10)) / (parseInt(track.style.height, 10) - parseInt(slider.style.height, 10)));
 
-  percentage.textContent = slider.percentage;  //.innerText will not work for Firefox
+  // percentage.textContent = slider.percentage;  //.innerText will not work for Firefox
   updateContentBox(slider.percentage)
 }
 

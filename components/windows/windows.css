@@ -1,0 +1,24 @@
+.windowsBtn {
+  margin:0;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1pt solid black;
+}
+
+.windowsArrow {
+  height:10px;
+  margin-left: 1px;
+  /* width:10px; */
+}
+
+.windowsTrack {
+  background-color: #FB4B4A;
+  border: 1pt solid black;
+}
+
+.windowsSlider {
+  background: #fff;
+  border: 1pt solid black;
+  height: 20px;
+}
