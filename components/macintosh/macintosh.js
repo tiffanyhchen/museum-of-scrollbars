@@ -47,11 +47,13 @@ slider.onmousedown = function (e) {
   slider.lastMousePosY = e.pageY;  //<-this is so that if you lift the mouse, move it and grab the slider again, it will not jump.
   slider.mouseState = 'down';
   document.mouseState = 'down';
+  slider.clicked = true;
 };
 
 slider.onmouseup = function (e) {
   slider.mouseState = 'up';
   document.mouseState = 'up';
+  slider.clicked = false;
 };
 
 slider.onclick = function(e) {
