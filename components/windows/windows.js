@@ -61,31 +61,43 @@ slider.onclick = function(e) {
 // Button mouse event functions
 upBtn.onclick = function(e) {
   console.log("up button clicked")
-  pageHeight = 20
-  moveSlider(Math.max(slider.lastMousePosY - pageHeight, slider.viewpointTop))}
+  moveUp()
+}
 
 downBtn.onclick = function(e) {
   console.log("down button clicked")
-  pageHeight = 20
-  // console.log("last y pos: "+slider.lastMousePosY)
-  // console.log("new y pos: "+Math.min(slider.lastMousePosY + pageHeight, slider.viewpointBottom - getAtInt(slider,'height')))
-  moveSlider(Math.min(slider.lastMousePosY + pageHeight, slider.viewpointBottom - getAtInt(slider,'height')))
+  moveDown()
 }
 
 upBtn.onmousedown = function(e) {
   upBtn.style.filter = "invert(1)"
+  upBtn.scrolling = true
 }
 
 upBtn.onmouseup = function(e) {
   upBtn.style.filter = "invert(0)"
+  upBtn.scrolling = false
 }
 
 downBtn.onmousedown = function(e) {
   downBtn.style.filter = "invert(1)"
+  downBtn.scrolling = true
 }
 
 downBtn.onmouseup = function(e) {
   downBtn.style.filter = "invert(0)"
+  downBtn.scrolling = false
+}
+
+setInterval(iterativeScroll, 100)
+
+function iterativeScroll() {
+  if (downBtn.scrolling) {
+    moveDown()
+  }
+  if (upBtn.scrolling) {
+    moveUp()
+  }
 }
 
 //Helper function. Not strictly required, but will make the logic down the bottom
@@ -188,6 +200,16 @@ function movePageDown() {
 
 function movePageUp() {
   pageHeight = boxHeight
+  moveSlider(Math.max(slider.lastMousePosY - pageHeight, slider.viewpointTop))
+}
+
+function moveDown() {
+  pageHeight = 20
+  moveSlider(Math.min(slider.lastMousePosY + pageHeight, slider.viewpointBottom - getAtInt(slider,'height')))
+}
+
+function moveUp() {
+  pageHeight = 20
   moveSlider(Math.max(slider.lastMousePosY - pageHeight, slider.viewpointTop))
 }
 

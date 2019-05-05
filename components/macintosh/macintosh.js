@@ -61,32 +61,45 @@ slider.onclick = function(e) {
 // Button mouse event functions
 upBtn.onclick = function(e) {
   console.log("up button clicked")
-  pageHeight = 20
-  moveSlider(Math.max(slider.lastMousePosY - pageHeight, slider.viewpointTop))}
+  moveUp()
+}
 
 downBtn.onclick = function(e) {
   console.log("down button clicked")
-  pageHeight = 20
-  // console.log("last y pos: "+slider.lastMousePosY)
-  // console.log("new y pos: "+Math.min(slider.lastMousePosY + pageHeight, slider.viewpointBottom - getAtInt(slider,'height')))
-  moveSlider(Math.min(slider.lastMousePosY + pageHeight, slider.viewpointBottom - getAtInt(slider,'height')))
+  moveDown()
 }
 
 upBtn.onmousedown = function(e) {
   document.getElementsByClassName('macintoshArrow')[0].src = "./assets/arrowUpFilled.png"
+  upBtn.scrolling = true
 }
 
 upBtn.onmouseup = function(e) {
   document.getElementsByClassName('macintoshArrow')[0].src = "./assets/arrowUp.png"
+  upBtn.scrolling = false
 }
 
 downBtn.onmousedown = function(e) {
   document.getElementsByClassName('macintoshArrow')[1].src = "./assets/arrowDownFilled.png"
+  downBtn.scrolling = true 
 }
 
 downBtn.onmouseup = function(e) {
   document.getElementsByClassName('macintoshArrow')[1].src = "./assets/arrowDown.png"
+  downBtn.scrolling = false
 }
+
+setInterval(iterativeScroll, 100)
+
+function iterativeScroll() {
+  if (downBtn.scrolling) {
+    moveDown()
+  }
+  if (upBtn.scrolling) {
+    moveUp()
+  }
+}
+
 
 //Helper function. Not strictly required, but will make the logic down the bottom
 //easier to follow by simplifying nested parens. It will get an element's style, ie. 10px, and return just the 10 as an integer:
@@ -188,6 +201,16 @@ function movePageDown() {
 
 function movePageUp() {
   pageHeight = boxHeight
+  moveSlider(Math.max(slider.lastMousePosY - pageHeight, slider.viewpointTop))
+}
+
+function moveDown() {
+  pageHeight = 20
+  moveSlider(Math.min(slider.lastMousePosY + pageHeight, slider.viewpointBottom - getAtInt(slider,'height')))
+}
+
+function moveUp() {
+  pageHeight = 20
   moveSlider(Math.max(slider.lastMousePosY - pageHeight, slider.viewpointTop))
 }
 
